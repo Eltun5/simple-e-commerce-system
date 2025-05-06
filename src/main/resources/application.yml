@@ -2,9 +2,9 @@ spring:
   application:
     name: BackendDeveloperTaskForStartUp
   datasource:
-    url: jdbc:postgresql://localhost:5432/e_commerce
-    password: password
+    url: jdbc:postgresql://db:5432/e_commerce
     username: postgres
+    password: password
   jpa:
     hibernate:
       ddl-auto: update
@@ -14,12 +14,12 @@ spring:
       max-file-size: 20MB
       max-request-size: 50MB
   cloudinary:
-    cloud-name: dxkofldog
-    api-key: 446982999267719
-    api-secret: fxS1jUxd40phjXxLNjcyVxQ3mAQ
+    cloud-name: ${CLOUDINARY_CLOUD_NAME}
+    api-key: ${CLOUDINARY_API_KEY}
+    api-secret: ${CLOUDINARY_API_SECRET}
   cache:
     type: redis
   data:
     redis:
-      host: localhost
+      host: redis
       port: 6379
