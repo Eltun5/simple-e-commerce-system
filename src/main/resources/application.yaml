@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: BackendDeveloperTaskForStartUp
+  datasource:
+    url: jdbc:postgresql://localhost:5432/e_commerce
+    password: password
+    username: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 50MB
+  cloudinary:
+    cloud-name: dxkofldog
+    api-key: 446982999267719
+    api-secret: fxS1jUxd40phjXxLNjcyVxQ3mAQ
+  cache:
+    type: redis
+  data:
+    redis:
+      host: localhost
+      port: 6379
